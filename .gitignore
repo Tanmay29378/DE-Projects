@@ -32,6 +32,7 @@ main.py
 resume.py
 resume copy.py
 support_logs*.log
-support_logs_ingestion_to_S3.ipynb
-support_tickets_ingestion_to_S3.ipynb
-ETL_DATA_TRANS.ipynb
+# Scratch copies at repo root only (portfolio notebooks live under project_care_plus/)
+/support_logs_ingestion_to_S3.ipynb
+/support_tickets_ingestion_to_S3.ipynb
+/ETL_DATA_TRANS.ipynb

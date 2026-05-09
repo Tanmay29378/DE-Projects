@@ -1,0 +1,10 @@
+# Local data and state (not for GitHub)
+day-wise-logs-data/
+*.log
+.env
+date_tracker.txt
+log_date_tracker.txt
+
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
