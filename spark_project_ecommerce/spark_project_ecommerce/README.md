@@ -35,26 +35,14 @@ The **`0_data/`** folder (full incremental CSVs) is **gitignored**. Keep it on y
 
 Adjust paths, widgets, and container names to match **your** ADLS layout before running.
 
-## Configuration placeholder
+## Security before you push or share
 
-Notebooks use the Azure storage account placeholder **`yourstorageacct`** in:
+Setup and processing notebooks may contain **your** Azure storage URLs, storage account names, or other environment-specific values. For a **public** GitHub repo you should:
 
-- Unity Catalog `MANAGED LOCATION` and external volume `LOCATION` URLs
-- `dbutils.widgets` defaults and saved widget metadata
+- Replace those values with placeholders or widgets-only defaults, **or**
+- Clear notebook outputs that embed full `abfss://...` paths from old runs.
 
-Replace **`yourstorageacct`** with your real ADLS Gen2 storage account name (3–24 lowercase letters and digits only) before running. Adjust container names (`uc-data`, `ecomm-raw-data`) if your naming differs.
-
-To re-sanitize notebooks after local runs (clears outputs + restores placeholders), run:
-
-```bash
-python spark_project_ecommerce/spark_project_ecommerce/tools/scrub_notebooks.py
-```
-
-## Git history
-
-If this repo was ever pushed with real storage account names, those names may still exist in **older commits**. For a public repo, consider [removing sensitive data from Git history](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) or rotating credentials / reviewing Azure storage network rules.
-
-This repo’s `.gitignore` excludes `0_data/` so bulk raw files are not uploaded.
+This repo’s `.gitignore` excludes `0_data/` so large raw files are not uploaded.
 
 ## Sample file layout (landing)
 
