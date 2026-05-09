@@ -1,14 +1,12 @@
-# DE-Projects
+# Data engineering portfolio
 
-Personal data-engineering portfolio: end-to-end pipelines, medallion-style lakehouse patterns, and supporting notebooks.
+Portfolio of **end-to-end data pipelines** and **lakehouse** implementations (Medallion architecture, Spark/Delta, cloud storage).
 
-## Projects
+## Featured project
 
-| Project | Stack | Description |
-|--------|--------|-------------|
-| [`spark_project_ecommerce/spark_project_ecommerce`](spark_project_ecommerce/spark_project_ecommerce/) | Azure ADLS Gen2, Databricks, Unity Catalog, Delta Lake, PySpark | E-commerce orders, shipments, and returns — Bronze → Silver → Gold dimensions and facts |
-
-Additional pipelines may be added alongside this folder over time.
+| Project | Stack | Summary |
+|---------|--------|---------|
+| [E-commerce analytics platform](spark_project_ecommerce/spark_project_ecommerce/) | Azure ADLS Gen2, Databricks, Unity Catalog, Delta Lake, PySpark, Power BI | Retail analytics: orders, shipments, returns — Bronze → Silver → Gold dimensions and facts with reporting layer |
 
 ## Clone
 
@@ -17,6 +15,4 @@ git clone git@github.com:Tanmay29378/DE-Projects.git
 cd DE-Projects
 ```
 
-## Note on data
-
-Large raw / incremental CSV dumps are **not** committed. Each project README describes expected layouts and includes small **`samples/`** files for schema reference only.
+Each project’s README describes scope, layout, and how the solution is structured. Sample schemas may be included where full datasets are not published.
