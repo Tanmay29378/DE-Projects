@@ -19,3 +19,19 @@ output/
 # OS
 .DS_Store
 Thumbs.db
+
+# Same folder as repo — personal / prep / scratch (not portfolio commits)
+*.code-workspace
+Interview_Prep_DE_Resume_Based.txt
+SQL_Interview_Questions.txt
+Satellite_DTC_Test_Scenarios.txt
+date_tracker.txt
+log_date_tracker.txt
+generate_phase2_testcases.py
+main.py
+resume.py
+resume copy.py
+support_logs*.log
+support_logs_ingestion_to_S3.ipynb
+support_tickets_ingestion_to_S3.ipynb
+ETL_DATA_TRANS.ipynb
