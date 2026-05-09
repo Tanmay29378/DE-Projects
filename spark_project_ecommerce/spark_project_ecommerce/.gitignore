@@ -1,0 +1,20 @@
+# Full raw / incremental datasets stay local only (see samples/ for tiny schema examples)
+0_data/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets / local config
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Databricks
+.databricks/
+
+# OS
+.DS_Store
+Thumbs.db

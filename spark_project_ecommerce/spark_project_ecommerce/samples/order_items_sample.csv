@@ -1,0 +1,3 @@
+dt,order_ts,customer_id,order_id,item_seq,product_id,quantity,unit_price_currency,unit_price,discount_pct,tax_amount,channel,coupon_code
+2025-09-16,2025-09-16 11:37:36,CUST000000190087,694962,1,2000000334530,1,USD,$17,5%,2,app,
+2025-09-16,2025-09-16 11:02:39,CUST000000084738,694963,1,2000000064253,1,INR,10854,0%,1954,app,
