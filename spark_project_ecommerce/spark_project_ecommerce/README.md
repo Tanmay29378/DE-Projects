@@ -11,7 +11,8 @@ PySpark / Delta pipelines on **Databricks** with **Unity Catalog**, **external v
 | `1_setup/` | Catalog, schemas, external volume for raw landing |
 | `2_medallion_processing_dim/` | Dimension Bronze → Silver → Gold notebooks |
 | `3_medallion_processing_fact/` | Fact Bronze → Silver → Gold + daily summary |
-| `resources/` | Architecture diagram |
+| `4_dashboarding/` | Power BI report (`.pbix`) and related assets |
+| `resources/` | Architecture diagram (SVG/PNG) and preview image |
 | `samples/` | Tiny CSV examples — **schema only**, not production data |
 
 The **`0_data/`** folder (full incremental CSVs) is **gitignored**. Keep it on your machine or object storage; do not commit bulk raw files.
