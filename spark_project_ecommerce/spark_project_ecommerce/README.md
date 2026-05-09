@@ -45,11 +45,17 @@ Before running in **your** Databricks workspace:
 2. Confirm container names (`uc-data`, `ecomm-raw-data`) match your environment or edit the SQL / widgets accordingly.
 3. Ensure your workspace **identity** can reach that storage (managed identity / service principal / credential passthrough per your setup).
 
-To re-sanitize after local runs (outputs + placeholder restore):
+To re-sanitize after local runs:
+
+1. Copy `tools/scrub_replacements.example.json` to **`tools/scrub_replacements.local.json`** (this file is **gitignored**).
+2. List any strings you want rewritten in notebooks (e.g. your real storage account → `yourstorageacct`).
+3. Run:
 
 ```bash
 python spark_project_ecommerce/spark_project_ecommerce/tools/scrub_notebooks.py
 ```
+
+With no local JSON file, the script **only clears cell outputs** — it does not embed any account names in the repo.
 
 Older Git commits may still contain previous names or outputs; consider [cleaning Git history](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) if that matters for compliance.
 

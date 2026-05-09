@@ -8,6 +8,9 @@
 .env
 .env.*
 
+# Local scrub config (put real Azure names here — never commit)
+tools/scrub_replacements.local.json
+
 # Python
 __pycache__/
 *.py[cod]

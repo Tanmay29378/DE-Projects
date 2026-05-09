@@ -1,0 +1,8 @@
+{
+  "replacements": [
+    {
+      "from": "myrealstorageaccountname",
+      "to": "yourstorageacct"
+    }
+  ]
+}
