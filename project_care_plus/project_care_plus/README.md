@@ -34,6 +34,7 @@ Demonstrate a practical **AWS data warehousing** pattern for healthcare-style su
 | `data-transformation/` | Log / ticket ETL and Parquet publishing |
 | `data-warehousing-analytics/redshift-setup/` | DDL, COPY patterns, notebook artifacts |
 | `data-warehousing-analytics/athena-sql-queries/` | Example analytics SQL |
+| `data-warehousing-analytics/dashboard/` | Power BI report (`.pbix`) |
 | `resources/` | Architecture diagram |
 | `env.example` | Environment variable template (copy to `.env` locally) |
 
