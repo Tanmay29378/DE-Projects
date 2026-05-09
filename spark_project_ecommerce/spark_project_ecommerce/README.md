@@ -35,14 +35,25 @@ The **`0_data/`** folder (full incremental CSVs) is **gitignored**. Keep it on y
 
 Adjust paths, widgets, and container names to match **your** ADLS layout before running.
 
-## Security before you push or share
+## Public repo — configuration placeholder
 
-Setup and processing notebooks may contain **your** Azure storage URLs, storage account names, or other environment-specific values. For a **public** GitHub repo you should:
+Notebooks committed for GitHub use the storage account placeholder **`yourstorageacct`** (replacing former personal/dev account names) and have **cell outputs cleared** so old runs do not leak full `abfss://…` paths or Unity Catalog IDs in HTML tables.
 
-- Replace those values with placeholders or widgets-only defaults, **or**
-- Clear notebook outputs that embed full `abfss://...` paths from old runs.
+Before running in **your** Databricks workspace:
 
-This repo’s `.gitignore` excludes `0_data/` so large raw files are not uploaded.
+1. Replace **`yourstorageacct`** with your real ADLS Gen2 storage account name (lowercase letters and digits only, 3–24 chars).
+2. Confirm container names (`uc-data`, `ecomm-raw-data`) match your environment or edit the SQL / widgets accordingly.
+3. Ensure your workspace **identity** can reach that storage (managed identity / service principal / credential passthrough per your setup).
+
+To re-sanitize after local runs (outputs + placeholder restore):
+
+```bash
+python spark_project_ecommerce/spark_project_ecommerce/tools/scrub_notebooks.py
+```
+
+Older Git commits may still contain previous names or outputs; consider [cleaning Git history](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) if that matters for compliance.
+
+This repo’s `.gitignore` excludes `0_data/` so bulk raw files are not uploaded.
 
 ## Sample file layout (landing)
 
